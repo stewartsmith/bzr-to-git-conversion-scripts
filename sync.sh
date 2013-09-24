@@ -40,7 +40,9 @@ fi
 
 for BRANCH in $MYSQL_BRANCHES; do
  echo "Importing $BRANCH"
- (cd $BZR_REPO/`basename $BRANCH`; bzr fast-export --marks=$MARKS.bzr --git-branch=`bzr nick` --plain --rewrite-tag-names ) | (pv -B 256m) | \
+ (cd $BZR_REPO/`basename $BRANCH`; bzr fast-export --marks=$MARKS.bzr --git-branch=`bzr nick` --plain --rewrite-tag-names ) | \
+ (bzr fast-import-filter --user-map=user-map.txt) | \
+ (pv -B 256m) | \
  (cd $OUT; git fast-import --import-marks=$MARKS.git --export-marks=$MARKS.git)
 
 done
