@@ -14,4 +14,7 @@ kuzminsky <akuzminsky@localhost.localdomain> = Aleksandr Kuzminsky <aleksandr.ku
 akuzminsky <aleksandr.kuzminsky@percona.com> = Aleksandr Kuzminsky <aleksandr.kuzminsky@percona.com>
 patrick crews <gleebix@gmail.com> = Patrick Crews <gleebix@gmail.com>
 jenkins@jenkins.percona.com = Jenkins <jenkins@jenkins.percona.com>
+billy.earney@gmail.com = billy-earney <billy.earney@gmail.com>
+billy-earney billy.earney@gmail.com = billy-earney <billy.earney@gmail.com>
+"billy-earney billy.earney@gmail.com"= billy-earney <billy.earney@gmail.com>
 

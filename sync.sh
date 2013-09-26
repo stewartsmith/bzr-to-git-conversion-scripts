@@ -32,21 +32,19 @@ LAST_BRANCH=
 for BRANCH in $BZR_BRANCHES; do
  echo "Importing $BRANCH"
 
- touch $MARKS-`basename $BRANCH`.git
+ touch $MARKS.git
 
- cp $MARKS-`basename $BRANCH`.git $MARKS-`basename $BRANCH`.git.in
-
- (cd $BZR_REPO/`basename $BRANCH`; bzr fast-export \
+ (cd $BZR_REPO/`basename $BRANCH`; bzr fast-export --checkpoint=1000\
  --git-branch=`bzr nick` --plain --rewrite-tag-names \
- --marks=$MARKS-`basename $BRANCH`.bzr \
+ --marks=$MARKS.bzr \
  ) | \
- (bzr fast-import-filter --user-map=user-map.txt) | \
+ sed -e ':begin;$!N;s/^committer billy-earney billy.earney@gmail.com\n <>/committer billy-earney <billy.earney@gmail.com>/' | \
+ (bzr fast-import-filter --dont-squash-empty-commits --user-map=user-map.txt -x .git/) | \
 # tee `basename $BRANCH`.fast-export |
  (pv -B 256m) | \
  (cd $OUT; git fast-import \
- --import-marks=$MARKS-`basename $BRANCH`.git.in --export-marks=$MARKS-`basename $BRANCH`.git.out
+ --import-marks=$MARKS.git --export-marks=$MARKS.git
 )
-cp $MARKS-`basename $BRANCH`.git.out $MARKS-`basename $BRANCH`.git
  LAST_BRANCH=`basename $BRANCH`
 done
 
