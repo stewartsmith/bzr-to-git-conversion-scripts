@@ -1,1 +1,17 @@
 First_name Last_name Martin.Skold@oracle.com> = Martin Skold <Martin.Skold@oracle.com>
+kinoyasu <kinoyasu@gauntlet4> = Yasufumi Kinoshita <yasufumi.kinoshita@percona.com>
+Yasufumi Kinoshita <kinoyasu@rynex6> = Yasufumi Kinoshita <yasufumi.kinoshita@percona.com>
+kinoyasu <kinoyasu@gauntlet3> = Yasufumi Kinoshita <yasufumi.kinoshita@percona.com>
+kinoyasu <kinoyasu@gauntlet4> = Yasufumi Kinoshita <yasufumi.kinoshita@percona.com>
+kinoyasu <kinoyasu@rynex4> = Yasufumi Kinoshita <yasufumi.kinoshita@percona.com>
+System Administrator <root@vadim-tkachenkos-mac-mini.local> = Vadim Tkachenko <vadim@percona.com>
+root <root@Debian-lenny-amd64> = Vadim Tkachenko <vadim@percona.com>
+root <root@localhost.localdomain> = Vadim Tkachenko <vadim@percona.com>
+root <root@ubuntu> = Vadim Tkachenko <vadim@percona.com>
+longbow <longbow@mil-nb> = Valentine Gostev <core.longbow@gmail.com>
+Sergei Glushchenko <sergei@ubuntu> = Sergei Glushchenko <sergei.glushchenko@percona.com>
+kuzminsky <akuzminsky@localhost.localdomain> = Aleksandr Kuzminsky <aleksandr.kuzminsky@percona.com>
+akuzminsky <aleksandr.kuzminsky@percona.com> = Aleksandr Kuzminsky <aleksandr.kuzminsky@percona.com>
+patrick crews <gleebix@gmail.com> = Patrick Crews <gleebix@gmail.com>
+jenkins@jenkins.percona.com = Jenkins <jenkins@jenkins.percona.com>
+
